@@ -96,13 +96,37 @@ class Tetris:
                 return True
         return False
     
-    def rotate_ask(self):
+    def rotate_again_ask(self, rotateAgain, shape):
+        if rotateAgain == "y":
+            again, shape = self.rotate_again_ask(input("Roate again (y/n)?").strip().lower(), shape)
+            if again == "y":
+                return "y", shape
+
+            elif again == "n":
+                return "n", shape
+            
+
+        elif rotateAgain == "n":
+            return "n", shape
+
+        else:
+            return self.rotatate_again_ask(input("invalid input, roate again (y/n)?").strip().lower(), shape)
+
+    def rotate_ask(self, rotate, shape):
         # Allow the player to rotate the shape
-        rotate = input("Rotate shape? (y/n): ").strip().lower()
         if rotate == "y":
             shape = self.rotate_shape(shape)
+            again, shape = self.rotate_again_ask(input("Roate again (y/n)?").strip().lower(), shape)
+            if again == "y":
+                pass
+
+            elif again == "n":
+                return shape
+        
         elif rotate == "n":
             pass
+        else:
+            self.rotate_ask(input("Invalid input, rotate shape 90 degrees? (y/n): ").strip().lower())
 
     def play(self):
         """Main game loop."""
@@ -117,7 +141,7 @@ class Tetris:
             shape = self.shapes[shape_name]
             print(f"Current shape: {shape_name}")
 
-            self.rotate_ask()
+            shape = self.rotate_ask(input("Rotate shape 90 degrees? (y/n): ").strip().lower(), shape)
 
             # Get the column from the player
             try:
