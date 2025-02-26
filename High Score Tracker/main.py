@@ -1,4 +1,7 @@
 #High Score Tracker Cecily, Pedro, Nicole, and Sawyer
+from simple_game_main import simple_game_main as simple_game
+#from [name of file] import [function name] as complex game
+#from 
 def main():
     run=True
     while run==True:
@@ -40,10 +43,10 @@ def main():
                                             2. complex game
                                             3. exit\n"""))
                         if choose_board==1:
-                            #simple game
+                            simple_game()
                             break
                         elif choose_board==2:
-                            #simple game
+                            complex_game()
                             break
                         elif choose_board==3:
                             break
