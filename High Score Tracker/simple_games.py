@@ -13,7 +13,7 @@ def one_ten():
                     if user_num >= 1 and user_num <= 10:
                         pass
                     else:
-                        print("_______\nCHOOSE FROM 1-10\n_______")
+                        print("-------\nCHOOSE FROM 1-10\n-------")
                         continue
                 except ValueError:
                     print("Please choose a valid NUMBER.")
