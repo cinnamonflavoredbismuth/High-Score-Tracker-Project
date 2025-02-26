@@ -1,10 +1,10 @@
 #High Score Tracker Cecily, Pedro, Nicole, and Sawyer
-from simple_game_main import simple_game_main as simple_game
-#from [name of file] import [function name] as complex game
-#from [name of file] import [function name] as simple10_scores
-#from [name of file] import [function name] as simple100_scores
-#from [name of file] import [function name] as complex_scores
-def main():
+from simple_game_main import simple_game_main as simple_game #nicole
+#from [name of file] import [function name] as complex game #pedro
+#from [name of file] import [function name] as simple10_scores #Sawyer
+#from [name of file] import [function name] as simple100_scores #sawyer 
+#from [name of file] import [function name] as complex_scores #sawyer
+def main(): #Cecily did this
     run=True
     while run==True:
         try:
