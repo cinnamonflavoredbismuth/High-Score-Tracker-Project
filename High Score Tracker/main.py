@@ -1,7 +1,9 @@
 #High Score Tracker Cecily, Pedro, Nicole, and Sawyer
 from simple_game_main import simple_game_main as simple_game
 #from [name of file] import [function name] as complex game
-#from 
+#from [name of file] import [function name] as simple10_scores
+#from [name of file] import [function name] as simple100_scores
+#from [name of file] import [function name] as complex_scores
 def main():
     run=True
     while run==True:
@@ -20,13 +22,13 @@ def main():
                                             3. complex scoreboard
                                             4. exit\n"""))
                         if choose_board==1:
-                            print("score board 1-10")#placeholder. put function in the print statement
+                            print(simple10_scores())
                             break
                         elif choose_board==2:
-                            print("score board 1-10")#placeholder. put function in the print statement
+                            print(simple100_scores())
                             break
                         elif choose_board==3:
-                            print("score board complex")#placeholder. put function in the print statement
+                            print(complex_scores())
                             break
                         elif choose_board==4:
                             break
