@@ -32,9 +32,7 @@ def one_ten():
                     while True:
                         play = input(f"SCORE: {score}\nSTREAK: {streak}\nWould you like to keep playing?(yes or no)\n ").title()
                         if play == 'No':
-                            with open("High-Score-Tracker-Project/High Score Tracker/simple_game1-10.csv", "a") as file:
-                                file.write(f"{score},{username}\n")
-                            return
+                            return score, 'end'
                         elif play == 'Yes':
                             break
                         elif play != 'Yes' and play != 'No':
@@ -42,7 +40,10 @@ def one_ten():
                             continue
                     break
                 elif user_num != comp_num:
-                    print("Nope! Try again!")
+                    if user_num > comp_num:
+                        print("Go a bit lower!")
+                    elif user_num < comp_num:
+                        print("Go higher!")
                     print("\n")
                     streak = 0
                     current+=1
@@ -80,9 +81,7 @@ def one_hundred():
                     while True:
                         play = input(f"SCORE: {score}\nSTREAK: {streak}\nWould you like to keep playing?(yes or no)\n ").title()
                         if play == 'No':
-                            with open("High-Score-Tracker-Project/High Score Tracker/simple_game1-100.csv", "a") as file:
-                                file.write(f"{score},{username}\n")
-                                return
+                            return score, 'end'
                         elif play == 'Yes':
                             break
                         elif play != 'Yes' and play != 'No':
@@ -90,7 +89,10 @@ def one_hundred():
                             continue
                     break
                 elif user_num != comp_num:
-                    print("Nope! Try again!")
+                    if user_num > comp_num:
+                        print("Go a bit lower!")
+                    elif user_num < comp_num:
+                        print("Go higher!")
                     print("\n")
                     streak = 0
                     current+=1
