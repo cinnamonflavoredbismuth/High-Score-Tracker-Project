@@ -29,7 +29,10 @@ class Tetris:
 
     def display_grid(self):
         """Display the current state of the grid."""
-        print("\nCurrent Grid:")
+        if self.game_over:
+            print("\nFinal Grid:")
+        elif not self.game_over:
+            print("\nCurrent Grid:")
         for row in self.grid:
             formatted_row = "|" + "|".join(row) + "|"
             print(formatted_row)
@@ -88,14 +91,13 @@ class Tetris:
         return len(completed_rows)
 
     def check_game_over(self):
-        """Check if the game is over."""
-        for column in range(self.grid_width):
-            if not self.can_place_shape(0, column, random.choice(list(self.shapes.values()))):
-                self.game_over = True
-                print("\nGame Over! No more space to place shapes.")
-                return True
+        """Check if the game is over by seeing if the top row is filled."""
+        if any(cell != "　" for cell in self.grid[0]):
+            self.game_over = True
+            print("\nGame Over! The top row is filled.")
+            return True
         return False
-    
+        
     def rotate_again_ask(self, rotateAgain, shape):
         if rotateAgain == "y":
             again, shape = self.rotate_again_ask(input("Roate again (y/n)?").strip().lower(), shape)
@@ -124,9 +126,9 @@ class Tetris:
                 return shape
         
         elif rotate == "n":
-            pass
+            return shape
         else:
-            self.rotate_ask(input("Invalid input, rotate shape 90 degrees? (y/n): ").strip().lower())
+            self.rotate_ask(input("Invalid input, rotate shape 90 degrees? (y/n): ").strip().lower(), shape)
 
     def play(self):
         """Main game loop."""
@@ -151,12 +153,13 @@ class Tetris:
                     if rows_cleared:
                         print(f"Cleared {rows_cleared} row(s)!")
                     if self.check_game_over():
-                        break
+                        print("Thanks for playing!")
+                    else:
+                        pass
             except ValueError:
                 print("Invalid input! Please enter a number.")
 
         self.display_grid()
-        print("Thanks for playing!")
 
 
 # Start the game
