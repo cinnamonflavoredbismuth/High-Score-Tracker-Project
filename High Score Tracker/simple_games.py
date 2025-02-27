@@ -32,7 +32,9 @@ def one_ten():
                     while True:
                         play = input(f"SCORE: {score}\nSTREAK: {streak}\nWould you like to keep playing?(yes or no)\n ").title()
                         if play == 'No':
-                            return score, 'end' #SCORE IS RETURNED HERE
+                            with open("High-Score-Tracker-Project/High Score Tracker/simple_game1-10.csv", "a") as file:
+                                file.write(f"{score},{username}\n")
+                            return
                         elif play == 'Yes':
                             break
                         elif play != 'Yes' and play != 'No':
@@ -78,7 +80,9 @@ def one_hundred():
                     while True:
                         play = input(f"SCORE: {score}\nSTREAK: {streak}\nWould you like to keep playing?(yes or no)\n ").title()
                         if play == 'No':
-                            return score, 'end' #SCORE IS RETURNED HERE
+                            with open("High-Score-Tracker-Project/High Score Tracker/simple_game1-100.csv", "a") as file:
+                                file.write(f"{score},{username}\n")
+                                return
                         elif play == 'Yes':
                             break
                         elif play != 'Yes' and play != 'No':
