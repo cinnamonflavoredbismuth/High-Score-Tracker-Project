@@ -1,6 +1,6 @@
 #High Score Tracker Cecily, Pedro, Nicole, and Sawyer
 from simple_game_main import simple_game_main as simple_game #nicole
-#from [name of file] import [function name] as complex game #pedro
+from highscore_printer import high_score_printer as score_printer #pedro
 #from [name of file] import [function name] as simple10_scores #Sawyer
 #from [name of file] import [function name] as simple100_scores #sawyer 
 #from [name of file] import [function name] as complex_scores #sawyer
@@ -22,10 +22,10 @@ def main(): #Cecily did this
                                             3. complex scoreboard
                                             4. exit\n"""))
                         if choose_board==1:
-                            print(simple10_scores())
+                            score_printer("High-Score-Tracker-Project/High Score Tracker/simple_game1-10.csv")
                             break
                         elif choose_board==2:
-                            print(simple100_scores())
+                            score_printer("High-Score-Tracker-Project/High Score Tracker/simple_game1-100.csv")
                             break
                         elif choose_board==3:
                             print(complex_scores())
