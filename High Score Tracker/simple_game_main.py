@@ -17,5 +17,3 @@ def simple_game_main():
                     break
         elif choice == '3':
             break
-
-simple_game_main()
