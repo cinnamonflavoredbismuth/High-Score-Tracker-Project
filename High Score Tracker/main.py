@@ -1,9 +1,8 @@
 #High Score Tracker Cecily, Pedro, Nicole, and Sawyer
 from simple_game_main import simple_game_main as simple_game #nicole
-from highscore_printer import high_score_printer as score_printer #pedro
-#from [name of file] import [function name] as simple10_scores #Sawyer
-#from [name of file] import [function name] as simple100_scores #sawyer 
-#from [name of file] import [function name] as complex_scores #sawyer
+from highscore_printer import high_score_printer as score_printer #Sawyer
+#from [name of file] import [function name] as [new function name]
+
 def main(): #Cecily did this
     run=True
     while run==True:

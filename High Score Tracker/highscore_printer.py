@@ -39,15 +39,15 @@ def high_score_printer(file_path):
             if player_number <= 5:
                 #Printing the 5 top scores with cool special colors!
                 if player_number == 1:
-                    print(fontstyle.apply(f"\t{player_number}\t{x["name"]}\t{x["highscore"]}", "underline/bold/Italic/yellow"))
+                    print(fontstyle.apply(f"\t{player_number}\t{x['name']}\t{x['highscore']}", "underline/bold/Italic/yellow"))
                 elif player_number == 2:
-                    print(fontstyle.apply(f"\t{player_number}\t{x["name"]}\t{x["highscore"]}", "bold/Italic/green"))
+                    print(fontstyle.apply(f"\t{player_number}\t{x['name']}\t{x['highscore']}", "bold/Italic/green"))
                 elif player_number == 3:
-                    print(fontstyle.apply(f"\t{player_number}\t{x["name"]}\t{x["highscore"]}", "Italic/cyan"))
+                    print(fontstyle.apply(f"\t{player_number}\t{x['name']}\t{x['highscore']}", "Italic/cyan"))
                 elif player_number == 4:
-                    print(fontstyle.apply(f"\t{player_number}\t{x["name"]}\t{x["highscore"]}", "purple"))
+                    print(fontstyle.apply(f"\t{player_number}\t{x['name']}\t{x['highscore']}", "purple"))
                 elif player_number == 5:
-                    print(fontstyle.apply(f"\t{player_number}\t{x["name"]}\t{x["highscore"]}", "red"))
+                    print(fontstyle.apply(f"\t{player_number}\t{x['name']}\t{x['highscore']}", "red"))
             else:
                 break
     #Back to where you came from
