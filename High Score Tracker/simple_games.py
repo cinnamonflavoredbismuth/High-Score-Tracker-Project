@@ -1,10 +1,18 @@
 #This is Nicole's simple game functions
 import random
 
+def save_user(userName):
+    if len(userName) == 3:
+        return userName
+    else:
+        userName = save_user(input("Invalid username, what is your username? (Please make it 3 characters) ").upper())
+        return userName
+
 def one_ten():
     score = 0
     current = 0
     streak = 0
+    username = save_user(input("What is your username? (Please make it 3 characters) ").upper())
     while True:
             comp_num = random.randint(1,10)
             while True:
@@ -32,7 +40,7 @@ def one_ten():
                     while True:
                         play = input(f"SCORE: {score}\nSTREAK: {streak}\nWould you like to keep playing?(yes or no)\n ").title()
                         if play == 'No':
-                            return score, 'end'
+                            return score, 'end', username
                         elif play == 'Yes':
                             break
                         elif play != 'Yes' and play != 'No':
@@ -54,6 +62,7 @@ def one_hundred():
     score = 0
     current = 0
     streak = 0
+    username = save_user(input("What is your username? (Please make it 3 characters) ").upper())
     while True:
             comp_num = random.randint(1,100)
             while True:
@@ -81,7 +90,7 @@ def one_hundred():
                     while True:
                         play = input(f"SCORE: {score}\nSTREAK: {streak}\nWould you like to keep playing?(yes or no)\n ").title()
                         if play == 'No':
-                            return score, 'end'
+                            return score, 'end', username
                         elif play == 'Yes':
                             break
                         elif play != 'Yes' and play != 'No':
