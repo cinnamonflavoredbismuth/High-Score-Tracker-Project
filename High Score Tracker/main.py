@@ -21,10 +21,10 @@ def main(): #Cecily did this
                                             3. complex scoreboard
                                             4. exit\n"""))
                         if choose_board==1:
-                            score_printer("High-Score-Tracker-Project/High Score Tracker/simple_game1-10.csv")
+                            score_printer("High Score Tracker/simple_game1-10.csv")
                             break
                         elif choose_board==2:
-                            score_printer("High-Score-Tracker-Project/High Score Tracker/simple_game1-100.csv")
+                            score_printer("High Score Tracker/simple_game1-100.csv")
                             break
                         elif choose_board==3:
                             print(complex_scores())

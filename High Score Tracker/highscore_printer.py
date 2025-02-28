@@ -9,9 +9,6 @@ import fontstyle
 #It requires the file path to be sent to it
 def high_score_printer(file_path):
 
-    #Clearing Screen
-    print("\033[H\033[J")
-
     highscores = []
     player_number = 0
 
