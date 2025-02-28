@@ -62,4 +62,8 @@ def main(): #Cecily did this
         except:
             print('invalid option')
     return
+
+#Clearing Screen
+print("\033[H\033[J")
+
 main()
