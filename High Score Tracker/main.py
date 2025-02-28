@@ -8,17 +8,17 @@ def main(): #Cecily did this
     while run==True:
         try:
             choose= int(input("""What do you want to do?
-1. See a scoreboard
-2. Play a game
-3. Leave\n"""))
+1) See a scoreboard
+2) Play a game
+3) Leave\n"""))
             if choose==1:#dispay scores
                 stay=True
                 while stay==True:
                     try:
                         choose_board=int(input("""What do you want to do?
-1. 1-10 scoreboard
-2. 1-100 scoreboard
-3. exit\n"""))
+1) 1-10 scoreboard
+2) 1-100 scoreboard
+3) exit\n"""))
                         if choose_board==1:
                             score_printer("High Score Tracker/simple_game1-10.csv")
                             break
@@ -36,8 +36,8 @@ def main(): #Cecily did this
                 while stay==True:
                     try:
                         choose_board=int(input("""What do you want to play?
-1. simple game
-2. exit\n"""))
+1) simple game
+2) exit\n"""))
                         if choose_board==1:
                             simple_game()
                             break
